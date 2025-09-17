@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="burlywood">
+    <marquee behavior="alternate" onmouseover="this.stop()" onmouseout="this.start()">
+        <h1 style="color: brown;">WELCOME TO FRESHER'S WORLD!!!</h1>
+    </marquee>
+    <table border="1" align="center">
+        <form action="">
+        <tr><th colspan="2">Registration Form</th></tr>
+        <tr>
+            <td><label for="name">Name</label></td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td><label for="age">Age</label></td>
+            <td><select name="" id="">
+                <option value="">Select age group</option>
+                <option value="">18-20</option>
+                <option value="">20-24</option>
+                <option value="">25-28</option>
+                <option value="">29-30</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><label for="password">Password</label></td>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <td><label for="re-password">Re-enter Password</label></td>
+            <td><input type="password" name="re-password"></td>
+        </tr>
+        <tr>
+            <td rowspan="5"><label for="security">Select your security question</label></td>
+            <tr><td><input type="radio" name="security">What is your pet name?</td></tr>
+            <tr><td><input type="radio" name="security">Who is your best friend?</td></tr>
+            <tr><td><input type="radio" name="security">What is your favourite colour?</td></tr>
+            <tr><td><input type="radio" name="security">Who is your favourite teacher?</td></tr>
+        </tr>
+        <tr>
+            <td><label for="security-ans">Answer of security question</label></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td><label for="email">E-mail id</label></td>
+            <td><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <td><label for="lang">Languages known</label></td>
+            <td>
+                <input type="checkbox" name="lang">Malayalam 
+                <input type="checkbox" name="lang">Hindi 
+                <input type="checkbox" name="lang">English
+            </td>
+        </tr>
+        <tr>
+            <td><label for="phone">Phone number</label></td>
+            <td>
+                <table border="1">
+                    <tr>
+                    <th>Home</th> 
+                    <th>Office</th> 
+                </tr>
+                <tr>
+                    <td><input type="number" name="phone"></td>
+                    <td><input type="number" name="phone"></td>
+                </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="cv">Upload CV</label></td>
+            <td><input type="file" name="cv"></td>
+        </tr>
+        <tr>
+            <td><input type="reset"></td>
+            <td><input type="submit"></td>
+        </tr>
+        </form>
+    </table>
+</body>
+</html>
