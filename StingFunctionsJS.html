@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math and String Functions</title>
+    <script>
+        function findRound() {
+            let x=document.getElementById("num").value;
+            let res=Math.round(x);
+            document.getElementById("result").innerText=res;
+        }
+        function findSqrt() {
+            let x=document.getElementById("num").value;
+            let res=Math.sqrt(x);
+            document.getElementById("result").innerText=res;
+        }
+        function findCeil() {
+            let x=document.getElementById("num").value;
+            let res=Math.ceil(x);
+            document.getElementById("result").innerText=res;
+        }
+        function findFloor() {
+            let x=document.getElementById("num").value;
+            let res=Math.floor(x);
+            document.getElementById("result").innerText=res;
+        }
+        function findTrunc() {
+            let x=document.getElementById("num").value;
+            let res=Math.trunc(x);
+            document.getElementById("result").innerText=res;
+        }
+        function findPower() {
+            let x=document.getElementById("num").value;
+            let y=prompt("Enter the exponent: ");
+            let res=Math.pow(x,y);
+            document.getElementById("result").innerText=res;
+        }
+        function findSign() {
+            let x=document.getElementById("num").value;
+            let res=Math.sign(x);
+            document.getElementById("result").innerText=res;
+        }
+        function findAbs() {
+            let x=document.getElementById("num").value;
+            let res=Math.abs(x);
+            document.getElementById("result").innerText=res;
+        }
+        function findSin() {
+            let x=document.getElementById("num").value;
+            let res=Math.sin(x);
+            document.getElementById("result").innerText=res;
+        }
+        function findCos() {
+            let x=document.getElementById("num").value;
+            let res=Math.cos(x);
+            document.getElementById("result").innerText=res;
+        }
+        function findMax() {
+            let x=document.getElementById("num").value;
+            let y=prompt("Enter another number: ");
+            let res=Math.max(x,y);
+            document.getElementById("result").innerText=res;
+        }
+        function findMin() {
+            let x=document.getElementById("num").value;
+            let y=prompt("Enter another number: ");
+            let res=Math.min(x,y);
+            document.getElementById("result").innerText=res;
+        }
+        function findLength() {
+            let x=document.getElementById("str").value;
+            let res=x.length;
+            document.getElementById("result").innerText=res;
+        }
+        function findSlice() {
+            let x=document.getElementById("str").value;
+            y=prompt("Enter startIndex: ");
+            z=prompt("Enter endIndex: ");
+            let res=x.slice(y,z);
+            document.getElementById("result").innerText=res;
+        }
+        function findIndexOf() {
+            let x=document.getElementById("str").value;
+            let y=prompt("Enter the string to be found: ")
+            let res=x.indexOf(y);
+            document.getElementById("result").innerText=res;
+        }
+        function findLastIndexOf() {
+            let x=document.getElementById("str").value;
+            let y=prompt("Enter the string to be found: ")
+            let res=x.indexOf(y);
+            document.getElementById("result").innerText=res;
+        }
+        function findSearch() {
+            let x=document.getElementById("str").value;
+            let y=prompt("Enter the string to be found: ")
+            let res=x.search(y);
+            document.getElementById("result").innerText=res;
+        }
+        function findSubstring() {
+            let x=document.getElementById("str").value;
+            y=prompt("Enter startIndex: ");
+            z=prompt("Enter endIndex: ");
+            let res=x.substring(y,z);
+            document.getElementById("result").innerText=res;
+        }
+        function findSubstr() {
+            let x=document.getElementById("str").value;
+            y=prompt("Enter startIndex: ");
+            z=prompt("Enter Length: ");
+            let res=x.substr(y,z);
+            document.getElementById("result").innerText=res;
+        }
+        function findReplace() {
+            let x=document.getElementById("str").value;
+            y=prompt("Enter the string to be replaced: ");
+            z=prompt("Enter new string: ");
+            let res=x.replace(y,z);
+            document.getElementById("result").innerText=res;
+        }
+        function findToUpperCase() {
+            let x=document.getElementById("str").value;
+            let res=x.toUpperCase();
+            document.getElementById("result").innerText=res;
+        }
+        function findToLowerCase() {
+            let x=document.getElementById("str").value;
+            let res=x.toLowerCase();
+            document.getElementById("result").innerText=res;
+        }
+        function findConcat() {
+            let x=document.getElementById("str").value;
+            let y=prompt("Enter second string: ");
+            let res=x.concat(y);
+            document.getElementById("result").innerText=res;
+        }
+        
+    </script>
+</head>
+<body>
+    
+    <h1>MATH FUNCTIONS</h1>
+    <p>Enter a number: <input type="text" id="num"></p>
+    <button id="round" onclick="findRound()">Round</button>
+    <button id="ceil" onclick="findCeil()">Ceil</button>
+    <button id="floor" onclick="findFloor()">floor</button>
+    <button id="trunc" onclick="findTrunc()">Truncate</button>
+    <button id="sign" onclick="findSign()">Sign</button>
+    <button id="power" onclick="findPower()">Power</button>
+    <button id="sqrt" onclick="findSqrt()">Square Root</button>
+    <button id="abs" onclick="findAbs()">Absolute</button>
+    <button id="sin" onclick="findSin()">Sin</button>
+    <button id="cos" onclick="findCos()">Cos</button>
+    <button id="min" onclick="findMin()">Min</button>
+    <button id="max" onclick="findMax()">Max</button>
+
+    <h1>STRING FUNCTIONS</h1>
+    <p>Enter a string: <input type="text" id="str"> </p>
+    <button onclick="findLength()">Length</button>
+    <button onclick="findSlice()">Slice</button>
+    <button onclick="findIndexOf()">IndexOf</button>
+    <button onclick="findLastIndexOf()">LastIndexOf</button>
+    <button onclick="findSearch()">Search</button>
+    <button onclick="findSubstring()">SubString</button>
+    <button onclick="findSubstr()">Substr</button>
+    <button onclick="findReplace()">Replace</button>
+    <button onclick="findToUpperCase()">ToUpperCase</button>
+    <button onclick="findToLowerCase()">ToLowerCase</button>
+    <button onclick="findConcat()">Concatenate</button>
+    <br><br>
+    <div id="result" style="width: 300px;
+  border: 5px solid palevioletred;
+  padding: 10px;
+  margin: 5px;"></div>
+</body>
+</html>
