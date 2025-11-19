@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        img {
+            border: 2px solid #333;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>Image 1</h2>
+        <img id="image1"
+             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj6TSOlj-zZ2dLyFVah6s9s6heViS9fVU5QC1Nqmo9TEwwbgv-1wKz_Cky1wo1XunIXxk&usqp=CAU"
+             alt="image1"
+             height="300px"
+             width="150px">
+    </div>
+
+    <script>
+        document.getElementById("image1").addEventListener("mouseover", myFunc1);
+        function myFunc1() {
+            document.getElementById("container").innerHTML = `
+                <h2>Image 2</h2>
+                <img id="image2"
+                     src="https://static.vecteezy.com/system/resources/previews/053/733/179/non_2x/every-detail-of-a-sleek-modern-car-captured-in-close-up-photo.jpg"
+                     alt="image2"
+                     height="300px"
+                     width="150px">
+            `;
+            document.getElementById("image2").addEventListener("mouseout", myFunc2);
+        }
+        function myFunc2() {
+            document.getElementById("container").innerHTML = `
+                <h2>Image 1</h2>
+                <img id="image1"
+                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj6TSOlj-zZ2dLyFVah6s9s6heViS9fVU5QC1Nqmo9TEwwbgv-1wKz_Cky1wo1XunIXxk&usqp=CAU"
+                     alt="image1"
+                     height="300px"
+                     width="150px">
+            `;
+            document.getElementById("image1").addEventListener("mouseover", myFunc1);
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    p{
+        color: red;
+    }
+  </style>
+</head>
+<body bgcolor="burlywood">
+  <marquee behavior="alternate" onmouseover="this.stop()" onmouseout="this.start()">
+    <h1 style="color: brown;">WELCOME TO FRESHER'S WORLD!!!</h1>
+  </marquee>
+
+  <form name="myForm" onsubmit="return validation()">
+    <table border="1" align="center">
+      <tr><th colspan="2">Registration Form</th></tr>
+
+      <tr>
+        <td><label for="name">Name</label></td>
+        <td><input type="text" name="name" ><br><p id="_name"></p></td>
+        
+      </tr>
+
+      <tr>
+        <td><label for="age">Age</label></td>
+        <td>
+          <input type="text" name="age" /><br>
+          <p id="_age"></p>
+        </td>
+      </tr>
+
+      <tr>
+        <td><label for="password">Password</label></td>
+        <td><input type="password" name="password" ></td>
+      </tr>
+
+      <tr>
+        <td><label for="re-password">Re-enter Password</label></td>
+        <td><input type="password" name="re-password" ></td>
+      </tr>
+
+      <tr>
+        <td>Select your security question</td>
+        <td>
+          <input type="radio" name="security" > What is your pet name?<br>
+          <input type="radio" name="security"> Who is your best friend?<br>
+          <input type="radio" name="security"> What is your favourite colour?<br>
+          <input type="radio" name="security"> Who is your favourite teacher?
+        </td>
+      </tr>
+
+      <tr>
+        <td><label for="security-ans">Answer of security question</label></td>
+        <td><input type="text" name="security-ans" ></td>
+      </tr>
+
+      <tr>
+        <td><label for="email">E-mail ID</label></td>
+        <td><input type="email" name="email" ></td>
+      </tr>
+
+      <tr>
+        <td><label for="lang">Languages known</label></td>
+        <td>
+          <input type="checkbox" name="lang"> Malayalam 
+          <input type="checkbox" name="lang"> Hindi 
+          <input type="checkbox" name="lang"> English
+        </td>
+      </tr>
+
+      <tr>
+        <td><label for="phone">Phone number</label></td>
+        <td>
+          <table border="1">
+            <tr><th>Home</th><th>Office</th></tr>
+            <tr>
+              <td><input type="number" name="phone_home" ><br /><p id="_home"></p></td>
+              <td><input type="number" name="phone_office"><br /><p id="_office"></p></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr>
+        <td><label for="cv">Upload CV</label></td>
+        <td><input type="file" name="cv"></td>
+      </tr>
+
+      <tr>
+        <td><input type="reset"></td>
+        <td><input type="submit" value="Submit"></td>
+      </tr>
+    </table>
+  </form>
+  <script>
+    function validation() {
+    let name = document.forms["myForm"]["name"].value;
+    let age = document.forms["myForm"]["age"].value;
+    let homePhone = document.forms["myForm"]["phone_home"].value;
+    let officePhone = document.forms["myForm"]["phone_office"].value;
+    let valid=true;
+
+    if (name === "") {
+      document.getElementById("_name").innerHTML = "Name is mandatory";
+      valid=false;
+    }
+
+    if (age === "" || isNaN(age) || age < 18) {
+      document.getElementById("_age").innerHTML = "Enter a valid age of 18 or above";
+      valid=false;
+    }
+
+    if (homePhone === "") {
+      document.getElementById("_home").innerHTML = "Home phone is required";
+      valid=false;
+    }
+
+    if (officePhone === "") {
+      document.getElementById("_office").innerHTML = "Office phone is required";
+      valid=false;
+    }
+    if (valid==true) {
+      alert("Form submitted successfully!");
+    }
+    else {
+    return false;
+  }
+  }
+</script>
+
+</body>
+</html>

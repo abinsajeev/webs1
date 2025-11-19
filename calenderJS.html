@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+</head>
+<body>
+    <script>
+        function generate_cal() {
+        var year = document.getElementById("input").value;
+        var mon = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+        var day = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+        var cal = ""; 
+
+        for(let month = 0; month < 12; month++) {
+            var curr = new Date(year, month, 1);
+
+            cal += "<table border='1'><tr>";
+            cal += "<th colspan='7'>" + mon[month] + " " + year + "</th></tr><tr>";
+            for(let i = 0; i < 7; i++) {
+                cal += "<th>" + day[i] + "</th>";
+            }
+            cal += "</tr><tr>";
+
+            let startDay = curr.getDay();
+            for(let i = 0; i < startDay; i++) {
+                cal += "<td></td>";
+            }
+            let daysInMonth = new Date(year, month + 1, 0).getDate();
+            for(let date = 1; date <= daysInMonth; date++) {
+                cal += "<td>" + date + "</td>";
+                if((startDay + date) % 7 === 0) {
+                    cal += "</tr><tr>";
+                }
+            }
+            cal += "</tr></table>";
+        }
+        document.getElementById("calendar").innerHTML = cal;
+    }
+    </script>
+    <p>Enter a year: <input type="text" id="input"></p>
+    <button onclick="generate_cal()">Generate Calendar</button>
+    <div id="calendar"></div>
+</body>
+</html>
